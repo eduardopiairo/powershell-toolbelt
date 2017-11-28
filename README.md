@@ -12,6 +12,12 @@ Start/Stop windows services
 
 ___
 
+## Network
+
+### telnet
+
+Makes a telnet connection
+
 ## Plaster
 
 ..
