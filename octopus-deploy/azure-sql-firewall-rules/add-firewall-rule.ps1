@@ -2,7 +2,7 @@
 
 $ipToAdd = Invoke-RestMethod http://ipinfo.io/json | Select-Object -exp ip
 
-$firewallRuleName = "OctoServer"
+$firewallRuleName = "VSTSagent"
 
 $firewallRules = Get-AzureRmSqlServerFirewallRule -ResourceGroupName "#{Azure-Resource-Group}" -ServerName "#{Database-Server-Name}" | Select-Object FirewallRuleName
  

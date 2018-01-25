@@ -1,6 +1,6 @@
 # Remove a specific rule from Azure SQl Server firewall 
 
-$firewallRuleName = "OctoServer"
+$firewallRuleName = "VSTSagent"
 
 $firewallRules = Get-AzureRmSqlServerFirewallRule -ResourceGroupName "#{Azure-Resource-Group}" -ServerName "#{Database-Server-Name}" | Select-Object FirewallRuleName
 
@@ -14,7 +14,7 @@ foreach ($rule in $firewallRules) {
         
         Write-Output "Rule already exist and will be deleted"
 
-        Remove-AzureRmSqlServerFirewallRule -ResourceGroupName $rg -ServerName $dbServer -FirewallRuleName $firewallRuleName
+        Remove-AzureRmSqlServerFirewallRule -ResourceGroupName "#{Azure-Resource-Group}" -ServerName "#{Database-Server-Name}" -FirewallRuleName $firewallRuleName
     }
 }
 
