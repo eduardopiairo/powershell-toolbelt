@@ -116,3 +116,5 @@ New-VirtualMachine -VMName 'SQLInjectAttackName' -ErrorVariable err -ErrorAction
 if ($err) {
     Add-Content -Path 'somelogfile.log' -Value "ERR: $($err.Exception.Message)"
 }
+
+
